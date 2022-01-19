@@ -106,7 +106,14 @@
       <button (click)="criarPensamento()" class="botao" type="submit">
         Salvar
       </button>
-      <button (click)="cancelar()" class="botao" type="button">Cancelar</button>
+      <button
+        (click)="cancelar()"
+        routerLink="/listarPensamento"
+        class="botao"
+        type="button"
+      >
+        Cancelar
+      </button>
     </div>
   </form>
 </section>
