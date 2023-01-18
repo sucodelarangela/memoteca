@@ -10,7 +10,7 @@ export class CriarPensamentoComponent {
     id: '1',
     conteudo: 'Aprendendo Angular',
     autoria: 'Angela Caldas',
-    modelo: ''
+    modelo: 'modelo1'
   };
 
   criarPensamento() {
