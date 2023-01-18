@@ -84,8 +84,11 @@
       </div>
     </div>
     <div class="acoes">
-      <button class="botao">Salvar</button>
-      <button class="botao">Cancelar</button>
+      <!-- event binding -->
+      <button (click)="criarPensamento()" class="botao" type="submit">
+        Salvar
+      </button>
+      <button (click)="cancelar()" class="botao" type="button">Cancelar</button>
     </div>
   </form>
 </section>

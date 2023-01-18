@@ -12,4 +12,12 @@ export class CriarPensamentoComponent {
     autoria: 'Angela Caldas',
     modelo: ''
   };
+
+  criarPensamento() {
+    alert('ok');
+  }
+
+  cancelar() {
+    alert('not ok');
+  }
 }
