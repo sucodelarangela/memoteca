@@ -5,7 +5,8 @@
       Adicionar pensamento
     </button>
   </header>
-  <div class="mural">
+  <!-- se houver itens cadastrados em listaPensamentos, então renderiza os elementos... -->
+  <div class="mural" *ngIf="listaPensamentos.length > 0; else semPensamentos">
     <!-- renderização dinâmica com ngFor (diretiva estrutural: que modifica elementos no html) -->
     <div *ngFor="let pensamento of listaPensamentos">
       <!-- usar property binding pra puxar os dados de app-pensamento.
@@ -15,3 +16,8 @@
     </div>
   </div>
 </section>
+<ng-template #semPensamentos>
+  <div class="ff-inter sem-pensamentos">
+    <p>Ainda não há pensamentos cadastrados!</p>
+  </div>
+</ng-template>
