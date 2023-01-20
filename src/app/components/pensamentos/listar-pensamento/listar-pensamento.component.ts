@@ -1,3 +1,5 @@
+import { PensamentoService } from './../pensamento.service';
+import { IPensamento } from './../pensamento';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,21 +9,15 @@ import { Component } from '@angular/core';
 })
 export class ListarPensamentoComponent {
   // criando atributo lista de pensamentos para serem loopados com ngFor e renderizados no mural
-  listaPensamentos = [
-    {
-      conteudo: 'Passo informações para o componente filho',
-      autoria: 'Componente pai',
-      modelo: 'modelo3'
-    },
-    {
-      conteudo: 'Minha propriedade é decorada com @Input()',
-      autoria: 'Componente filho',
-      modelo: 'modelo1'
-    },
-    {
-      conteudo: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim, fugit recusandae. Atque, delectus eveniet quos reiciendis ex assumenda officiis minima voluptatum modi rem. Adipisci, non nulla modi architecto fuga unde. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde ut blanditiis nihil modi rerum animi, nisi libero sunt veritatis ipsum laboriosam odio est culpa omnis nostrum odit tempora facere voluptas?',
-      autoria: 'Fulaninho',
-      modelo: 'modelo2'
-    }
-  ];
+  listaPensamentos: IPensamento[] = [];
+
+  // recebendo os métodos do service
+  constructor(private service: PensamentoService) { }
+
+  // o ngOnInit faz parte do ciclo de vida do componente. Toda lógica que deve ser executada quando o componente for carregado, vai dentro dele
+  ngOnInit(): void {
+    this.service.listar().subscribe((listaPensamentos) => {
+      this.listaPensamentos = listaPensamentos;
+    });
+  }
 }
