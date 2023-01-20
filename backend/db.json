@@ -19,16 +19,10 @@
       "modelo": "modelo2"
     },
     {
-      "conteudo": "Pensamento de teste",
-      "autoria": "Dev Angular",
-      "modelo": "modelo3",
+      "conteudo": "Testando função de editar pensamento",
+      "autoria": "Novo dev Angular",
+      "modelo": "modelo2",
       "id": 4
-    },
-    {
-      "conteudo": "aisuhdiahduahiduah",
-      "autoria": "asiduahidsha",
-      "modelo": "modelo1",
-      "id": 5
     }
   ]
 }
