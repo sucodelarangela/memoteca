@@ -12,4 +12,12 @@ export class PensamentoComponent {
     autoria: 'Angela Caldas',
     modelo: 'modelo3'
   };
+
+  // método para retornar classes diferentes que serão aplicadas com ngClass
+  larguraPensamento(): string {
+    if (this.pensamento.conteudo.length >= 256) {
+      return 'pensamento-g';
+    }
+    return 'pensamento-p';
+  }
 }
