@@ -5,4 +5,13 @@
       Adicionar pensamento
     </button>
   </header>
+  <div class="mural">
+    <!-- renderização dinâmica com ngFor (diretiva estrutural: que modifica elementos no html) -->
+    <div *ngFor="let pensamento of listaPensamentos">
+      <!-- usar property binding pra puxar os dados de app-pensamento.
+      A prop é o nome dado no componente pai (listarPensamento)
+      O valor é a let acima -->
+      <app-pensamento [pensamento]="pensamento"></app-pensamento>
+    </div>
+  </div>
 </section>
